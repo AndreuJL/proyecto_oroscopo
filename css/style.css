@@ -12,8 +12,21 @@
   src: url("") format("woff2"), url("") format("woff");
 }
 
-/* ******************************** */
+main {
+  background: rgb(200, 200, 200);
+  
+  & img {
+    width: 100%;
+    height: 100vh;
+  }
 
-/* Colores */
+  & .grid {
+    width: 100%;
+    height: 100vh;
 
-/* ******************************** */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 10px;
+  }
+}
