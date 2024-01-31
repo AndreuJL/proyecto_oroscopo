@@ -12,21 +12,91 @@
   src: url("") format("woff2"), url("") format("woff");
 }
 
-main {
-  background: rgb(200, 200, 200);
-  
-  & img {
-    width: 100%;
-    height: 100vh;
-  }
+body {
+  width: 100%;
+  height: 100vh;
+  background: #960001;
 
-  & .grid {
-    width: 100%;
-    height: 100vh;
+  & .container {
+    background-image: url(/svg/fondo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    
 
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-    gap: 10px;
+    & main {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+      gap: 10px;
+      height: 100vh;
+      color: rgb(236, 236, 236);
+
+      & .titulo {
+        grid-column: 2/7;
+        grid-row: 2/4;
+        align-self: center;
+        text-align: center;
+
+        font-size: 40px;
+      }
+
+      & .nube1 {
+        grid-column: 2/4;
+        grid-row: 4/6;
+        align-self: center;
+        justify-self: center;
+        width: 230px;
+
+        /* place-self: center; Es lo mismo que align-self: center; y justify-self: center;*/
+      }
+
+      & a {
+        grid-column: 4/5;
+        grid-row: 4/6;
+        place-self: center;
+
+        background: #d74747;
+        width: 200px;
+        height: 70px;
+        font-size: 40px;
+        border: 1px solid black;
+        border-radius: 10px;!
+        text-decoration: none;
+        text-align: center;
+        color: rgb(236, 236, 236);
+      }
+
+      & .nube2 {
+        grid-column: 5/7;
+        grid-row: 4/6;
+        place-self: center;
+        width: 230px;
+      }
+
+      & .arbol1 {
+        grid-column: 1/3;
+        grid-row: 6/9;
+        align-self: end;
+        justify-self: end;
+        width: 210px;
+      }
+
+      & .casa {
+        grid-column: 3/6;
+        grid-row: 6/9;
+        align-self: end;
+        justify-self: center;
+        width: 330px;
+      }
+
+      & .arbol2 {
+        grid-column: 6/-1;
+        grid-row: 6/9;
+        align-self: end;
+        justify-self: start;
+        width: 210px;
+      }
+    }
   }
 }
